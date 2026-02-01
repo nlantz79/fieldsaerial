@@ -1,10 +1,8 @@
 # Enable MIME types for JavaScript modules
 AddType application/javascript .js .mjs
-
 # Enable MIME types for other assets
 AddType text/css .css
 AddType image/svg+xml .svg
-
 # SPA fallback - route all requests to index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
