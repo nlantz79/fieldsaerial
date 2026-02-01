@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, FileText } from "lucide-react";
 import heroImage from "@/assets/hero-aerial.jpg";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
@@ -20,9 +21,11 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo/Brand */}
           <div className="mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <h2 className="text-primary font-semibold tracking-widest text-sm uppercase">
-              3 Fields Aerial
-            </h2>
+            <img 
+              src={logo} 
+              alt="3 Fields Aerial" 
+              className="h-24 md:h-32 w-auto mx-auto invert"
+            />
           </div>
 
           {/* Headline */}
