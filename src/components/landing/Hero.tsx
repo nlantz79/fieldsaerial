@@ -45,7 +45,7 @@ const Hero = () => {
             style={{ animationDelay: "0.3s" }}
           >
             Drone photography, video, and mapping for landowners, builders, and homesteaders
-            across New Brunswick & Maine.
+            across New Brunswick.
           </p>
 
           {/* CTAs */}
