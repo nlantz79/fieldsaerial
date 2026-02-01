@@ -24,7 +24,7 @@ const Hero = () => {
             <img 
               src={logo} 
               alt="3 Fields Aerial" 
-              className="h-32 md:h-44 w-auto mx-auto invert"
+              className="h-40 md:h-56 w-auto mx-auto invert"
             />
           </div>
 
