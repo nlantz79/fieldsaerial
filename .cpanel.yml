@@ -4,4 +4,9 @@ deployment:
     - export DEPLOYPATH=/home/$USER/public_html/
     - npm install
     - npm run build
-    - /bin/cp -R dist/* $DEPLOYPATH
+    # Ensure target exists
+    - /bin/mkdir -p $DEPLOYPATH
+    # Remove previous hashed assets to prevent stale 404s after rebuild
+    - /bin/rm -rf $DEPLOYPATH/assets
+    # Copy full dist output (including dotfiles like .htaccess)
+    - /bin/cp -R dist/. $DEPLOYPATH
