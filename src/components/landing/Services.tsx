@@ -1,29 +1,69 @@
-import { Camera, Video, Map, Layers } from "lucide-react";
+import { 
+  Map, 
+  Box, 
+  Scan, 
+  Mountain, 
+  TrendingUp, 
+  Leaf, 
+  Camera, 
+  Video, 
+  Home, 
+  RotateCw 
+} from "lucide-react";
 
-const services = [
+const mappingServices = [
+  {
+    icon: Map,
+    title: "Orthomosaics (Orthophotos)",
+    description: "High-resolution, georeferenced, map-accurate top-down imagery.",
+  },
+  {
+    icon: Box,
+    title: "3D Models",
+    description: "Textured 3D terrain and object models for planning and visualization.",
+  },
+  {
+    icon: Scan,
+    title: "Point Clouds",
+    description: "Classified, georeferenced 3D data sets for detailed analysis.",
+  },
+  {
+    icon: Mountain,
+    title: "Digital Elevation Models",
+    description: "DSM (ground + buildings + vegetation) and DTM (bare-earth terrain).",
+  },
+  {
+    icon: TrendingUp,
+    title: "Contour Lines",
+    description: "Accurate topographic contour lines derived from elevation data.",
+  },
+  {
+    icon: Leaf,
+    title: "Plant Health Mapping (NDVI)",
+    description: "Multispectral analysis for crop and vegetation health assessment.",
+  },
+];
+
+const mediaServices = [
   {
     icon: Camera,
-    title: "Aerial Photography",
-    description:
-      "High-resolution imagery that reveals the full scope of your property, from boundary surveys to feature documentation.",
+    title: "Drone Photography",
+    description: "Professional aerial photography for properties, events, and documentation.",
   },
   {
     icon: Video,
-    title: "Cinematic Drone Video",
-    description:
-      "Professional 4K video productions that showcase your land, property, or project with smooth, dynamic aerial footage.",
+    title: "Drone Videography",
+    description: "Cinematic 4K aerial video for promotional and commercial use.",
   },
   {
-    icon: Map,
-    title: "Mapping & Point Cloud Data",
-    description:
-      "Accurate 3D terrain models and point cloud data for surveying, volume calculations, and detailed analysis.",
+    icon: Home,
+    title: "Real Estate Aerials",
+    description: "Stunning property visuals that help listings stand out in the market.",
   },
   {
-    icon: Layers,
-    title: "Orthomosaics & Terrain Models",
-    description:
-      "DSM/DTM, slope analysis, and drainage visualization to understand your land's topography and water flow.",
+    icon: RotateCw,
+    title: "3D Virtual Tours",
+    description: "Immersive virtual experiences for properties, lodges, and facilities.",
   },
 ];
 
@@ -37,31 +77,60 @@ const Services = () => {
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
-            See Your Land From a New Perspective
+            Professional Drone Data & Media
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Professional drone services that help you understand, plan, and document
-            your property with precision.
+            From survey-grade mapping to promotional visuals—accurate, practical 
+            outputs for landowners, builders, and businesses.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-6 h-6 text-primary" />
+        {/* Drone Mapping & Survey Data */}
+        <div className="mb-16">
+          <h3 className="text-xl font-semibold text-primary mb-6 flex items-center gap-2">
+            <Map className="w-5 h-5" />
+            Drone Mapping & Survey Data
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mappingServices.map((service) => (
+              <div
+                key={service.title}
+                className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h4 className="text-lg font-semibold mb-2">{service.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Aerial Media Services */}
+        <div>
+          <h3 className="text-xl font-semibold text-secondary mb-6 flex items-center gap-2">
+            <Camera className="w-5 h-5" />
+            Aerial Media Services
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {mediaServices.map((service) => (
+              <div
+                key={service.title}
+                className="p-6 rounded-xl bg-gradient-card border border-border hover:border-secondary/30 transition-all duration-300 hover:shadow-glow"
+              >
+                <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-secondary" />
+                </div>
+                <h4 className="text-lg font-semibold mb-2">{service.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
