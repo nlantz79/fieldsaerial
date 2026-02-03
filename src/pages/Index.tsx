@@ -1,8 +1,10 @@
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import Services from "@/components/landing/Services";
-import Homesteads from "@/components/landing/Homesteads";
 import UseCases from "@/components/landing/UseCases";
+import WhyUs from "@/components/landing/WhyUs";
+import ServiceArea from "@/components/landing/ServiceArea";
+import Gallery from "@/components/landing/Gallery";
 import Process from "@/components/landing/Process";
 import Contact from "@/components/landing/Contact";
 import Footer from "@/components/landing/Footer";
@@ -14,8 +16,10 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
-        <Homesteads />
         <UseCases />
+        <WhyUs />
+        <ServiceArea />
+        <Gallery />
         <Process />
         <Contact />
       </main>
