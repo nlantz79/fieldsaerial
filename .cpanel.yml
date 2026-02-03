@@ -2,11 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/$USER/public_html/
-    - npm install
-    - npm run build
-    # Ensure target exists
-    - /bin/mkdir -p $DEPLOYPATH
-    # Remove previous hashed assets to prevent stale 404s after rebuild
-    - /bin/rm -rf $DEPLOYPATH/assets
-    # Copy full dist output (including dotfiles like .htaccess)
-    - /bin/cp -R dist/. $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
