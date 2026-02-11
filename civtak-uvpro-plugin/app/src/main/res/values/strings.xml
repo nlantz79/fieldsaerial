@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UV-PRO KISS Bridge</string>
+    <string name="notif_channel_id">uvpro_kiss_link</string>
+    <string name="notif_channel_name">UV-PRO Bluetooth Link</string>
+    <string name="notif_title">UV-PRO link active</string>
+    <string name="notif_text_connecting">Connecting to handheld radio…</string>
+    <string name="notif_text_connected">Connected and bridging TAK over RF</string>
+</resources>
